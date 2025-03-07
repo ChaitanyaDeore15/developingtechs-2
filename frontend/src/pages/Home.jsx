@@ -12,7 +12,7 @@ function Home() {
 	const { user } = useAuthContext();
 
 	useEffect(() => {
-		const fetchWorkouts = async () => {
+		const fetchWorkouts = async (request,response) => {
 			try {
 				const response = await fetch(`${baseURL}/api/workouts`, {
 					headers: {
